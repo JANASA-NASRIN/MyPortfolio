@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
@@ -10,23 +9,24 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     alert(`Thanks, ${formData.name}! Your message has been received.`);
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-   
-    <section className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-purple-800 flex items-center justify-center px-6">
-      <div className="max-w-lg w-full bg-purple-900 bg-opacity-40 rounded-lg p-8 shadow-2xl border border-purple-700">
-        <h2 className="text-4xl font-extrabold text-purple-300 mb-6 text-center">
+    <section
+      className="min-h-[70vh] bg-gradient-to-br from-[#113F67] via-[#34699A] to-[#58A0C8] flex items-center justify-center px-4 sm:px-6"
+    >
+      <div className="max-w-md w-full bg-[#89CFF0] bg-opacity-10 rounded-xl p-8 shadow-lg border border-[#34699A]">
+        <h2 className="text-3xl font-bold text-[#113F67] mb-8 text-center font-poppins">
           Contact Me
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label
               htmlFor="name"
-              className="block mb-2 text-purple-200 font-semibold"
+              className="block mb-2 text-[#34699A] font-semibold"
             >
               Name
             </label>
@@ -37,7 +37,7 @@ const ContactPage = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-md bg-black bg-opacity-50 border border-purple-600 text-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-[#34699A] text-[#113F67] placeholder-[#89CFF0] focus:outline-none focus:ring-2 focus:ring-[#89CFF0]"
               placeholder="Your name"
             />
           </div>
@@ -45,7 +45,7 @@ const ContactPage = () => {
           <div>
             <label
               htmlFor="email"
-              className="block mb-2 text-purple-200 font-semibold"
+              className="block mb-2 text-[#34699A] font-semibold"
             >
               Email
             </label>
@@ -56,7 +56,7 @@ const ContactPage = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-md bg-black bg-opacity-50 border border-purple-600 text-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-[#34699A] text-[#113F67] placeholder-[#89CFF0] focus:outline-none focus:ring-2 focus:ring-[#89CFF0]"
               placeholder="Your email"
             />
           </div>
@@ -64,7 +64,7 @@ const ContactPage = () => {
           <div>
             <label
               htmlFor="message"
-              className="block mb-2 text-purple-200 font-semibold"
+              className="block mb-2 text-[#34699A] font-semibold"
             >
               Message
             </label>
@@ -74,24 +74,22 @@ const ContactPage = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="5"
-              className="w-full px-4 py-2 rounded-md bg-black bg-opacity-50 border border-purple-600 text-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              rows="4"
+              className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-[#34699A] text-[#113F67] placeholder-[#89CFF0] focus:outline-none focus:ring-2 focus:ring-[#89CFF0]"
               placeholder="Write your message here..."
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition"
+            className="w-full py-3 bg-[#58A0C8] hover:bg-[#34699A] text-white font-semibold rounded-md transition"
           >
             Send Message
           </button>
         </form>
       </div>
     </section>
-  
   );
 };
 
 export default ContactPage;
-

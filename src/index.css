@@ -14,14 +14,13 @@
   font-family: 'Inter', sans-serif;
 }
 
+
+
 body {
-  background-color: #0A0A0A; /* deep black */
-  color: white; /* default text color */
+  background: linear-gradient(to right, #113F67 0%, #34699A 50%, #58A0C8 100%);
+  background-attachment: fixed;
 }
 
 
-/*html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden; /* removes both horizontal & vertical scrolling */
+
+
