@@ -13,13 +13,7 @@ const fadeInUp = {
 
 const HomePage = () => {
   return (
-    <section
-      className="py-16 text-white min-h-screen"
-      style={{
-        background:
-          "linear-gradient(to right, #113F67 0%, #34699A 50%, #58A0C8 100%)",
-      }}
-    >
+    <section className="py-16 min-h-screen bg-black text-[#FDF5E6]">
       <Container>
         <div className="flex items-center justify-between flex-wrap gap-10">
           {/* Left side content */}
@@ -29,15 +23,15 @@ const HomePage = () => {
             animate="animate"
             variants={fadeInUp}
           >
-            <h1 className="text-5xl font-bold text-[#FDF5AA] leading-tight mb-4 font-poppins">
+            <h1 className="text-5xl font-bold leading-tight mb-4 font-poppins text-[#FDF5AA]">
               Hi, I'm <span className="text-[#58A0C8]">Janasa Ara Nasrin</span>
             </h1>
 
-            <h2 className="text-3xl font-semibold mb-2 text-[#FDF5AA] font-poppins">
+            <h2 className="text-3xl font-semibold mb-2 font-poppins text-[#FDF5AA]">
               Front End Developer
             </h2>
 
-            <p className="text-lg text-gray-200 mb-6 font-poppins mt-4 leading-relaxed">
+            <p className="text-lg text-gray-400 mb-6 font-poppins mt-4 leading-relaxed">
               I craft responsive and user-friendly websites with a touch of
               creativity. From HTML & CSS to modern React and Tailwind
               interfaces, I aim for clean, functional, and elegant user
@@ -52,8 +46,8 @@ const HomePage = () => {
                 </button>
               </Link>
               <a
-                href=""
-                download
+                href="/JANASA ARA NASRIN.pdf"  // Link to CV in public folder
+                download="Janasa_Ara_Nasrin_CV.pdf"
                 className="px-6 py-3 border border-[#FDF5AA] text-[#FDF5AA] font-semibold rounded hover:bg-[#FDF5AA] hover:text-[#113F67] hover:shadow-lg transition text-center"
               >
                 Download CV
@@ -102,7 +96,7 @@ const HomePage = () => {
             <img
               src={myphoto2}
               alt="Janasa Ara Nasrin"
-              className="rounded-2xl shadow-lg border-4 border-[#FDF5AA]"
+              className=" rounded-3xl "
             />
           </motion.div>
         </div>

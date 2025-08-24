@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -9,84 +10,103 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     alert(`Thanks, ${formData.name}! Your message has been received.`);
     setFormData({ name: "", email: "", message: "" });
   };
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 40 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: "easeOut" },
+  };
+
   return (
-    <section
-      className="min-h-[70vh] bg-gradient-to-br from-[#113F67] via-[#34699A] to-[#58A0C8] flex items-center justify-center px-4 sm:px-6"
-    >
-      <div className="max-w-md w-full bg-[#89CFF0] bg-opacity-10 rounded-xl p-8 shadow-lg border border-[#34699A]">
-        <h2 className="text-3xl font-bold text-[#113F67] mb-8 text-center font-poppins">
-          Contact Me
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
-            <label
-              htmlFor="name"
-              className="block mb-2 text-[#34699A] font-semibold"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-[#34699A] text-[#113F67] placeholder-[#89CFF0] focus:outline-none focus:ring-2 focus:ring-[#89CFF0]"
-              placeholder="Your name"
-            />
-          </div>
+    <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 py-20">
+      <div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-12">
 
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-2 text-[#34699A] font-semibold"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-[#34699A] text-[#113F67] placeholder-[#89CFF0] focus:outline-none focus:ring-2 focus:ring-[#89CFF0]"
-              placeholder="Your email"
-            />
-          </div>
+        {/* Left Column - Info/Intro */}
+        <motion.div
+          className="md:w-1/2 flex flex-col justify-center text-center md:text-left space-y-6"
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+        >
+          <h2 className="text-4xl font-bold text-yellow-400">Get in Touch</h2>
+          <p className="text-gray-300 text-lg leading-relaxed">
+            I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.  
+            Fill out the form and I’ll get back to you as soon as possible!
+          </p>
+          <p className="text-gray-400">
+            Email: <span className="text-yellow-400">nasrinjanasa@gmail.com</span><br/>
+            Phone: <span className="text-yellow-400">01742901588</span>
+          </p>
+        </motion.div>
 
-          <div>
-            <label
-              htmlFor="message"
-              className="block mb-2 text-[#34699A] font-semibold"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="4"
-              className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-[#34699A] text-[#113F67] placeholder-[#89CFF0] focus:outline-none focus:ring-2 focus:ring-[#89CFF0]"
-              placeholder="Write your message here..."
-            ></textarea>
-          </div>
+        {/* Right Column - Form */}
+        <motion.div
+          className="md:w-1/2 bg-zinc-900 rounded-xl p-8 shadow-lg border border-zinc-700"
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+        >
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label htmlFor="name" className="block mb-2 text-gray-300 font-semibold">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Your name"
+              />
+            </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 bg-[#58A0C8] hover:bg-[#34699A] text-white font-semibold rounded-md transition"
-          >
-            Send Message
-          </button>
-        </form>
+            <div>
+              <label htmlFor="email" className="block mb-2 text-gray-300 font-semibold">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Your email"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block mb-2 text-gray-300 font-semibold">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="5"
+                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Write your message here..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-500 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </motion.div>
+
       </div>
     </section>
   );
