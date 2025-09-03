@@ -31,14 +31,14 @@ const ContactPage = () => {
           initial="initial"
           animate="animate"
         >
-          <h2 className="text-4xl font-bold text-yellow-400">Get in Touch</h2>
+          <h2 className="text-4xl font-bold text-[#5682B1]">Get in Touch</h2>
           <p className="text-gray-300 text-lg leading-relaxed">
             I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.  
             Fill out the form and I’ll get back to you as soon as possible!
           </p>
           <p className="text-gray-400">
-            Email: <span className="text-yellow-400">nasrinjanasa@gmail.com</span><br/>
-            Phone: <span className="text-yellow-400">01742901588</span>
+            Email: <span className="text-[#5682B1]">nasrinjanasa@gmail.com</span><br/>
+            Phone: <span className="text-[#5682B1]">01742901588</span>
           </p>
         </motion.div>
 
@@ -51,7 +51,7 @@ const ContactPage = () => {
         >
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="name" className="block mb-2 text-gray-300 font-semibold">
+              <label htmlFor="name" className="block mb-2 text-[#FFE8DB] font-semibold">
                 Name
               </label>
               <input
@@ -61,13 +61,13 @@ const ContactPage = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-[#FFE8DB] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5682B1]"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block mb-2 text-gray-300 font-semibold">
+              <label htmlFor="email" className="block mb-2 text-[#FFE8DB] font-semibold">
                 Email
               </label>
               <input
@@ -77,13 +77,13 @@ const ContactPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-[#FFE8DB] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5682B1]"
                 placeholder="Your email"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block mb-2 text-gray-300 font-semibold">
+              <label htmlFor="message" className="block mb-2 text-[#FFE8DB] font-semibold">
                 Message
               </label>
               <textarea
@@ -93,14 +93,14 @@ const ContactPage = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-2 rounded-md bg-black bg-opacity-20 border border-gray-700 text-[#FFE8DB] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5682B1]"
                 placeholder="Write your message here..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-500 transition"
+              className="w-full py-3 bg-[#5682B1] text-black font-semibold rounded-md hover:bg-[#FFE8DB] transition"
             >
               Send Message
             </button>

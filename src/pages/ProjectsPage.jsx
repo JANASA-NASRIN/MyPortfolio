@@ -42,7 +42,7 @@ const ProjectsPage = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         {/* Title */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-yellow-400 drop-shadow-lg"
+          className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-[#5682B1] drop-shadow-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -58,7 +58,7 @@ const ProjectsPage = () => {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-xl overflow-hidden shadow-lg bg-zinc-900 border border-zinc-700 hover:border-yellow-400 transition"
+              className="block rounded-xl overflow-hidden shadow-lg bg-zinc-900 border border-zinc-700 hover:border-[#5682B1] transition"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -72,7 +72,7 @@ const ProjectsPage = () => {
                 className="w-full h-48 md:h-56 object-cover object-top transition-transform duration-300"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-yellow-400 mb-2 border-b border-zinc-700 inline-block pb-1">
+                <h3 className="text-xl font-bold text-[#5682B1] mb-2 border-b border-zinc-700 inline-block pb-1">
                   {title}
                 </h3>
                 <p className="text-gray-300 italic text-sm leading-relaxed">

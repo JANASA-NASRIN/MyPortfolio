@@ -29,7 +29,7 @@ const AboutPage = () => {
     <section id="about" className="bg-black py-16 min-h-screen text-white">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-12 text-yellow-400"
+          className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#5682B1]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -60,7 +60,7 @@ const AboutPage = () => {
 
             {/* Courses & Certifications */}
             <div className="bg-zinc-900 rounded-lg shadow-lg p-6 border border-zinc-700">
-              <h3 className="text-2xl font-semibold mb-4 text-yellow-400 border-b border-zinc-700 pb-2">
+              <h3 className="text-2xl font-semibold mb-4 text-[#5682B1] border-b border-zinc-700 pb-2">
                 Courses & Certifications
               </h3>
               <ul className="list-disc list-inside text-gray-300 text-base space-y-2">
@@ -79,7 +79,7 @@ const AboutPage = () => {
             initial="initial"
             animate="animate"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-yellow-400 border-b border-zinc-700 pb-2">
+            <h3 className="text-2xl font-semibold mb-6 text-[#5682B1] border-b border-zinc-700 pb-2">
               Skills
             </h3>
             <div className="flex flex-wrap justify-center gap-4">

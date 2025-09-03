@@ -10,9 +10,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            className="ml-10 text-2xl font-bold flex items-center gap-2 text-[#FDF5AA] hover:text-[#58A0C8] transition duration-300"
+            className="ml-10 text-2xl font-bold flex items-center gap-2 text-[#FFE8DB] hover:text-[#5682B1] transition duration-300"
           >
-            *Janasa*
+            JANASA
           </Link>
 
           {/* Menu */}
@@ -20,7 +20,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/"
-                className="flex items-center gap-2 transition duration-300 hover:text-[#FDF5AA] hover:drop-shadow-[0_0_8px_#FDF5AA]"
+                className="flex items-center gap-2 transition duration-300 hover:text-[#5682B1] hover:drop-shadow-[0_0_8px_#FDF5AA]"
               >
                 <FaHome /> Home
               </Link>
@@ -28,7 +28,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/about"
-                className="flex items-center gap-2 transition duration-300 hover:text-[#58A0C8] hover:drop-shadow-[0_0_8px_#58A0C8]"
+                className="flex items-center gap-2 transition duration-300 hover:text-[#5682B1] hover:drop-shadow-[0_0_8px_#58A0C8]"
               >
                 <FaUser /> About
               </Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/projects"
-                className="flex items-center gap-2 transition duration-300 hover:text-[#FDF5AA] hover:drop-shadow-[0_0_8px_#FDF5AA]"
+                className="flex items-center gap-2 transition duration-300 hover:text-[#5682B1] hover:drop-shadow-[0_0_8px_#FDF5AA]"
               >
                 <FaCode /> Projects
               </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="flex items-center gap-2 transition duration-300 hover:text-[#58A0C8] hover:drop-shadow-[0_0_8px_#58A0C8]"
+                className="flex items-center gap-2 transition duration-300 hover:text-[#5682B1] hover:drop-shadow-[0_0_8px_#58A0C8]"
               >
                 <FaEnvelope /> Contact
               </Link>
